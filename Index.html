@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Challenge</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/ytStyle.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+    <h3>Youtube Video Search Engine</h3>
+    <div class="container">
+      <div class="row" ng-app="ytStartApp" ng-cloak>
+        <div ng-controller="SearchVideoCtrl as searchCtrl" class="col-sm-8">
+            <div ng-include src="'searchConditions.html'"></div>
+            <ui-view></ui-view>
+        </div>
+        <div ng-controller="FavouritesCtrl as favouritesCtrl" class="col-sm-4 favs">
+            <div class="fav"> Favorites</div>
+            <video-List model="favouritesCtrl.Favourites" issearch="false"></video-List>
+        </div>
+      </div>    
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB5gvhYEIZD8UwHwUqodLHr5J3ijPVBbsQ"></script>
+    <script src="./app/ui.router.js"></script>
+    <script src="./scripts/ytStartApp.js"></script>
+    <script src="./scripts/Videos/ytVideos.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="//apis.google.com/js/client.js?onload=initialize"></script>
+</body>
+</html>

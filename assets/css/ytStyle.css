@@ -1,0 +1,119 @@
+body {
+  background: #f1f1f1;
+}
+h3{
+  background:darkgray;  
+  margin-top: 0px; 
+  padding: 5px;
+  color:white;
+}
+label{
+  vertical-align: text-bottom;
+}
+.favs{
+   background: #DDDDDD;
+}
+
+
+.fav{
+  background:darkgray;  
+  margin: 0px; 
+  padding: 3px;
+  color:white;
+  text-align: center;
+}
+
+.options {
+  display: block;
+  text-align: right;
+  font-size: 1.2em;
+  line-height: 16px;
+  font-weight: bold;
+  color: #eee;
+  margin-bottom: 8px;
+}
+.options .sorticon {
+  position: relative;
+  top: 3px;
+}
+
+.options .sorticon img {
+  opacity: 0.6;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.options .sorticon img:hover {
+  opacity: 1.0;
+}
+.options .sorticon.active img {
+  opacity: 1.0;
+}
+
+#listdisplay { 
+  display: block;
+}
+
+#listdisplay li {
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #aaa;
+}
+#listdisplay li a img {
+  display: block;
+  float: left;
+  padding: 5px;
+  border: 2px solid #bbb;
+  background: #fff;
+  margin-right: 20px;
+}
+
+#listdisplay li .innercontent h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 3.0em;
+  line-height: 1.35em;
+  margin-bottom: 4px;
+  color: #73ed95;
+  font-weight: bold;
+}
+
+#listdisplay.thumbview li {
+  display: block;
+  width: 360px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 7px;
+  border: 0;
+}
+#listdisplay.thumbview li a img {
+  display: block;
+  float: none;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+#listdisplay.thumbview li .innercontent {
+  display: block;
+  text-align: center;
+}
+#listdisplay.thumbview li .innercontent h2 {
+  font-size: 2.2em;
+}
+#listdisplay.thumbview li .innercontent p {
+  display: none;
+}
+
+.tile {
+    background: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    vertical-align: align;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /*width: 25%;
+    float: left;
+    margin-bottom: 12px;*/
+}
