@@ -1,0 +1,15 @@
+<div ng-controller="VideoCtrl as videoCtrl" >
+	<iframe width="560" height="315" src={{videoCtrl.videoUrl}} frameborder="0" allowfullscreen></iframe>
+	<div class="row">
+		<div class="col-sm-6">Channel Title: <strong>{{videoCtrl.metaData.channelTitle}}</strong></div>
+		<div class="col-sm-6">Like count: <strong>{{videoCtrl.metaData.likeCount}}</strong></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6"></div>
+		<div class="col-sm-6">Dislike count: <strong>{{videoCtrl.metaData.dislikeCount}}</strong></div>
+	</div>
+	<div ng-repeat="comment in videoCtrl.comments" class="row tile clearfix">
+    	<strong>{{comment.snippet.topLevelComment.snippet.authorDisplayName}}</strong>
+		<div>{{comment.snippet.topLevelComment.snippet.textDisplay}}</div>
+	</div>
+</div>
