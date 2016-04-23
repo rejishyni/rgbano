@@ -1,37 +1,30 @@
-<!--<h2>{{searchCtrl.title}}</h2>-->
 <div class="row" >
-  <div class="col-sm-3">
-    <label> Search Text</label>
+  <div class="col-sm-4">
+      <div>Search Text</div>
+      <div><input id="query" type="text" ng-model="searchCtrl.SearchText" class="form-control" size="30" placeholder="Enter search text"/></div>
   </div>
-  <div class="col-sm-5">
-    <label>Location & Distance</label> 
+  <div class="col-sm-4">
+    <div>Location and Radius</div> 
+    <div>
+      <input id="loc" type="text" ng-model="searchCtrl.Location" class="form-control redLWidth" placeholder="Enter location" /> 
+      <select ng-model="searchCtrl.LocationRad" class="form-control redRWidth">
+        <option ng-repeat="locRad in searchCtrl.Radius" value="{{locRad.val}}">{{locRad.text}}</option>
+      </select> 
+    </div>
   </div>
   <div class="col-sm-2">
-    <label>Sort Order</label> 
-  </div>
-  <div class="col-sm-2"></div> 
-</div>
-<div class="row" >
-  <div class="col-sm-3">
-     <input id="query" type="text" ng-model="searchCtrl.SearchText" class="form-control" size="30" placeholder="Enter search text"/>
-  </div>
-  <div class="col-sm-3">    
-    <input id="loc" type="text" ng-model="searchCtrl.Location" class="form-control" placeholder="Enter location"/>
-  </div>
-  <div class="col-sm-2 pull-left ">
-    <select ng-model="searchCtrl.LocationRad" class="form-control">
-      <option ng-repeat="locRad in searchCtrl.Radius" value="{{locRad.val}}">{{locRad.text}}</option>
-    </select> 
+    <div>Sort Order</div> 
+    <div>
+      <select ng-model="searchCtrl.sortVal" class="form-control">
+        <option value="date">Date</option>
+        <option value="rating">Rating</option>
+        <option value="relevance">Relevance</option>
+      </select> 
+    </div>
   </div>
   <div class="col-sm-2">
-     <select ng-model="searchCtrl.sortVal" class="form-control">
-      <option value="date">Date</option>
-      <option value="rating">Rating</option>
-      <option value="relevance">Relevance</option>
-    </select> 
-  </div>
-  <div class="col-sm-2 ">
-    <button class="btn btn-secondary-outline glyphicon glyphicon-search" id="search-button" ng-click="searchCtrl.Search()" >&nbsp;Search</button>
+    <div>&nbsp;</div>
+    <div><button class="btn btn-secondary-outline glyphicon glyphicon-search" id="search-button" ng-click="searchCtrl.Search()" >&nbsp;Search</button></div>
   </div> 
 </div>
 <div style="padding-bottom:5px"><sub>Search limited to 10 results</sub></div>
