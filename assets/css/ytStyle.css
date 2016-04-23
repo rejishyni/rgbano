@@ -2,7 +2,7 @@ body {
   background: #f1f1f1;
 }
 h3{
-  background:darkgray;  
+  background: #A9A9A9;  
   margin-top: 0px; 
   padding: 5px;
   color:white;
@@ -14,13 +14,50 @@ label{
    background: #DDDDDD;
 }
 
-
 .fav{
-  background:darkgray;  
+  background: #A9A9A9;  
   margin: 0px; 
   padding: 3px;
   color:white;
   text-align: center;
+  width: calc(108%);
+  position: relative;
+  left:calc(-14px);
+}
+
+.favbuttonsCont
+{
+  position:relative;
+  display:inline-block
+}
+
+.favbuttons{
+  position:absolute; 
+  bottom: 0px; right:0px; 
+  z-index:10; 
+  border-radius:0;
+  border: none;
+  /*opacity: 1;
+
+  background-color: transparent;
+  border-top: 1px solid white;
+  border-left: 1px solid white;*/
+}
+
+.scText{
+    background: #D3D3D3;  
+}
+
+.redLWidth {
+    display: inline-block;
+    float:left;
+    width: calc(59%);
+}
+
+.redRWidth {
+    display: inline-block;
+    float:right;
+    width: calc(40%);
 }
 
 .options {

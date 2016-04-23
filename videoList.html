@@ -1,9 +1,9 @@
    <div ng-repeat="item in Items" class="row tile clearfix">
         <div ng-class="{'col-xs-6' : $parent.IsSearch==='true'}" >
-        	<div style="position:relative;display:inline-block">
+        	<div class="favbuttonsCont">
 				<a ui-sref="play({ videoId:'{{item.id.videoId}}' })"><img src="{{item.snippet.thumbnails['medium'].url}}"></a>
-				<button ng-show="$parent.IsSearch==='true'" type="button" data-role="button" title="Add Favorites" role="button" data-tooltip-text="Add Favorites" style="position:absolute; bottom: 0px; right:0px; z-index:10;border-radius:0;" ng-click="setFavorites(item.id.videoId)" class="btn btn-secondary-outline btn-sm">+</button>
-				<button ng-show="$parent.IsSearch==='false'" type="button" data-role="button" title="Remove Favorites" role="button" data-tooltip-text="Remove Favorites" style="position:absolute; bottom: 0px; right:0px; z-index:10; border-radius:0;" ng-click="removeFavorites(item.id.videoId)" class="btn btn-secondary-outline btn-sm">-</button>
+				<button ng-show="$parent.IsSearch==='true'" type="button" data-role="button" title="Add Favorites" role="button" data-tooltip-text="Add Favorites" ng-click="setFavorites(item.id.videoId)" class="btn btn-secondary-outline btn-xs favbuttons"><span class="glyphicon glyphicon-plus-sign"></span></button>
+				<button ng-show="$parent.IsSearch==='false'" type="button" data-role="button" title="Remove Favorites" role="button" data-tooltip-text="Remove Favorites" ng-click="removeFavorites(item.id.videoId)" class="btn btn-secondary-outline btn-xs favbuttons"><span class="glyphicon glyphicon-minus-sign"></span></button>
 			</div>
 		</div>
 		<div ng-class="{'col-xs-6' : $parent.IsSearch==='true'}">

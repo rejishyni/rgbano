@@ -5,7 +5,7 @@ angular.module('ytVideos', [])
 			title:"YouTube Video Search Engine"
 		};
 	}])
-	.filter('searchCity', function() {
+	.filter('searchLocation', function() {
 	  	return function(items,search) {
 			var filtered = [];
 		    if(!search){return items;}
@@ -182,7 +182,7 @@ angular.module('ytVideos', [])
 	      	return deferr.promise;
 	    };
 
-	     this.GetComments = function (videoId) {
+	    this.GetComments = function (videoId) {
 			var deferr = $q.defer();
 	     	
 		 	var request = gapi.client.youtube.commentThreads.list({
